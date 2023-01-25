@@ -73,6 +73,8 @@ Model Architecture diagram can be found here, since the images are too large to 
 
 - Number of parameters: 2,942,019
 
+- Training time: 
+
 #### Plots - Training, Loss functions
 
 <div>
@@ -83,7 +85,7 @@ Model Architecture diagram can be found here, since the images are too large to 
 
 As it can be seen, used EarlyStopping callback function stopped on 140 epochs. The plots above show the smooth nature of the training: metrics values increase, loss values decrease, both converge.
 
-### Architecture 2 - Autoencoder with Skip-Connections
+### Architecture 2 - Autoencoder with Skip Connections
 
 #### Model Architecture
 
@@ -95,6 +97,8 @@ Model Architecture diagram can be found here, since the images are too large to 
 
 - Number of parameters: 7,053,123
 
+- Training time: 
+
 #### Plots - Training, Loss functions
 
 <div>
@@ -103,7 +107,7 @@ Model Architecture diagram can be found here, since the images are too large to 
 </div>
 
 
-As it can be seen, used EarlyStopping callback function stopped a bit later than 140 epochs. 
+As it can be seen, used EarlyStopping callback function stopped a bit later than 140 epochs. However, loss values are smaller than in case of simple Autoencoder.
 
 ### Architecture 3 - GAN
 
@@ -116,6 +120,8 @@ Model Architecture diagram can be found here, since the images are too large to 
 - Size in memory: 100.0MB
 
 - Number of parameters: 10,200,228
+
+- Training time: 
 
 #### Plots - Training, Loss functions
 
@@ -130,3 +136,57 @@ Model Architecture diagram can be found here, since the images are too large to 
 A great raggedness can be seen on the plots above. It took the algorithm 4'000 to converge, and still the discriminator did not manage to "win" generator. When it comes to loss function, it stabilizes only by approximately 2'500 epoch.
 
 ## Model Comparison and Results
+
+### Autoencoder
+
+<div>
+  <img src="images/autoencoder/0.png" alt="sample0"/>
+  <img src="images/autoencoder/3.png" alt="sample3"/>
+  <img src="images/autoencoder/1.png" alt="sample1"/>
+</div>
+
+### Autoencoder with Skip Connections
+
+<div>
+  <img src="images/autoencoder_skip/0.png" alt="sample0"/>
+  <img src="images/autoencoder_skip/3.png" alt="sample3"/>
+  <img src="images/autoencoder_skip/1.png" alt="sample1"/>
+</div>
+
+### GAN
+
+<div>
+  <img src="images/gan/0.png" alt="sample0"/>
+  <img src="images/gan/3.png" alt="sample3"/>
+  <img src="images/gan/1.png" alt="sample1"/>
+</div>
+
+## Tools
+
+- Runtime Environment: `Google Colab`
+
+- Libraries: `numpy, matplotlib, PIL, cv2, imgaug, tensorflow, tensorboard`
+
+## References
+
+- [Articles that worked with CelebA Dataset](https://paperswithcode.com/dataset/celeba)
+
+- [Dice Coefficient](https://en.wikipedia.org/wiki/S%C3%B8rensen%E2%80%93Dice_coefficient)
+
+- [Jaccard Distance](https://en.wikipedia.org/wiki/Jaccard_index)
+
+- [Cosine Similarity](https://en.wikipedia.org/wiki/Cosine_similarity)
+
+- [Mean absolute error](https://en.wikipedia.org/wiki/Mean_absolute_error)
+
+- [Structural similarity](https://en.wikipedia.org/wiki/Structural_similarity)
+
+- [Peak signal-to-noise ratio](https://en.wikipedia.org/wiki/Peak_signal-to-noise_ratio) 
+
+- [Autoencoder Explained](https://neptune.ai/blog/representation-learning-with-autoencoder)
+
+- [Skip Connections Explained](https://towardsdatascience.com/using-skip-connections-to-enhance-denoising-autoencoder-algorithms-849e049c0ac9)
+
+- [GAN Explained](https://developers.google.com/machine-learning/gan/gan_structure)
+
+
