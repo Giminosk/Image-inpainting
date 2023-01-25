@@ -2,7 +2,7 @@
 
 ## Dataset Description
 
-For the purposes of the project, CelebA (CelebFaces Attributes) dataset was chosen.
+For the purposes of the project, CelebA (CelebFaces Attributes) dataset was chosen. The computations were evaluated on 10'000 images from it.
 
 - Link to the dataset and the article in which the image collection was used: [Dataset](https://paperswithcode.com/dataset/celeba)
 
@@ -14,7 +14,7 @@ For the purposes of the project, CelebA (CelebFaces Attributes) dataset was chos
   <img src="data/test/samples/10.png" alt="sample10"/>
 </div> 
 
-In order to perform image inpainting, it was needed to add artifacts to further inpaint it.
+In order to perform image inpainting, it was needed to add artifacts to further inpaint it and augument later on.
 
 - Dataset masked sample images: [Masked Images](https://github.com/Giminosk/Image-inpainting/tree/main/data/test/samples_masked), e.g.:
 
