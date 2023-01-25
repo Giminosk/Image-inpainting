@@ -73,7 +73,7 @@ Model Architecture diagram can be found here, since the images are too large to 
 
 - Number of parameters: 2,942,019
 
-- Training time: 
+- Training time: ~2h
 
 #### Plots - Training, Loss functions
 
@@ -97,7 +97,7 @@ Model Architecture diagram can be found here, since the images are too large to 
 
 - Number of parameters: 7,053,123
 
-- Training time: 
+- Training time: ~3h
 
 #### Plots - Training, Loss functions
 
@@ -121,7 +121,7 @@ Model Architecture diagram can be found here, since the images are too large to 
 
 - Number of parameters: 10,200,228
 
-- Training time: 
+- Training time: ~8.5h
 
 #### Plots - Training, Loss functions
 
