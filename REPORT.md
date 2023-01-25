@@ -32,7 +32,12 @@ The goal of image inpainting problem in computer vision is to fill in missing or
 
 **Note:** The hyperparameters' values ***(Dropout, Optimizer)*** were chosen by using Tuning. The tensorboard events of it can be found here: [Tuning](tensorboard/)
 
-<img src="images/autoencoder/hparams.png" width="400">
+**Hyperparameters Tuning Plots for Autoencoder and Autoencoder Skip Connections**
+
+<div>
+  <img src="images/autoencoder/hparams.png" width="400">
+  <img src="images/autoencoder_skip/hparams.png" width="392">
+</div>
 
 ### Description of used metrics, loss, and evaluation (common for all architectures)
 
