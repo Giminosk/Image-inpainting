@@ -52,11 +52,11 @@ The goal of image inpainting problem in computer vision is to fill in missing or
 
 **Loss functions:**
 
-- Mean absolute error [MAE](https://en.wikipedia.org/wiki/Mean_absolute_error)
+- Mean absolute error - [MAE](https://en.wikipedia.org/wiki/Mean_absolute_error)
 
-- Structural similarity [SSIM](https://en.wikipedia.org/wiki/Structural_similarity)
+- Structural similarity - [SSIM](https://en.wikipedia.org/wiki/Structural_similarity)
 
-- Peak signal-to-noise ratio [PSNR](https://en.wikipedia.org/wiki/Peak_signal-to-noise_ratio) 
+- Peak signal-to-noise ratio - [PSNR](https://en.wikipedia.org/wiki/Peak_signal-to-noise_ratio) 
 
 The best results were obtained using ***SSIM*** loss function. Therefore, it was used for all further computations.
 
@@ -113,7 +113,7 @@ As it can be seen, used EarlyStopping callback function stopped a bit later than
 
 #### Model Architecture
 
-Model Architecture diagram can be found here, since the images are too large to display: [GAN Discriminator Architecture Diagram](images/gan/discriminator.png) [GAN Generator Architecture Diagram](images/gan/generator.png)
+Model Architecture diagram can be found here, since the images are too large to display: [GAN Discriminator Architecture Diagram](images/gan/discriminator.png) and [GAN Generator Architecture Diagram](images/gan/generator.png)
 
 #### Model Analysis
 
