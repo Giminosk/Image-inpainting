@@ -32,13 +32,15 @@ The goal of image inpainting problem in computer vision is to fill in missing or
 
 **Note:** The hyperparameters' values ***(Dropout, Optimizer)*** were chosen by using Tuning. The tensorboard events of it can be found here: [Tuning](tensorboard/)
 
-## Description of used metrics, loss, and evaluation (common for all architectures)
+<img src="images/autoencoder/hparams.png" width="400">
+
+### Description of used metrics, loss, and evaluation (common for all architectures)
 
 **Hyperparameters:**
 
-- Dropout (tuned on 0.1, 0.2, 0.3, 0.4 rates)
+- Dropout = 0.2 (tuned on 0.1, 0.2, 0.3, 0.4 rates)
 
-- Optimizer (tuned on 'adam', 'sgd', 'adagrad' options)
+- Optimizer = 'adam' (tuned on 'adam', 'sgd', 'adagrad' options)
 
 **Metrics:**
 
@@ -56,7 +58,7 @@ The goal of image inpainting problem in computer vision is to fill in missing or
 
 - Peak signal-to-noise ratio [PSNR](https://en.wikipedia.org/wiki/Peak_signal-to-noise_ratio) 
 
-The best results were obtained using ***PSNR*** loss function. Therefore, it was used for all further computations.
+The best results were obtained using ***SSIM*** loss function. Therefore, it was used for all further computations.
 
 
 ### Architecture 1 - Simple Autoencoder
@@ -67,20 +69,64 @@ Model Architecture diagram can be found here, since the images are too large to 
 
 #### Model Analysis
 
-- Size in memory: 37.0 MB
+- Size in memory: 37.0MB
 
 - Number of parameters: 2,942,019
 
-#### Training Description
-
-
-
-#### Plots - Loss functions and Hyperparameters
+#### Plots - Training, Loss functions
 
 <div>
-  <img src="images/autoencoder/cosine_dice.png" width="300">
-  <img src="images/autoencoder/jaccard_loss.png" width="300">
-  <img src="images/autoencoder/hparams.png" width="400">
+  <img src="images/autoencoder/cosine_dice.png" width="400">
+  <img src="images/autoencoder/jaccard_loss.png" width="400">
 </div>
 
 
+As it can be seen, used EarlyStopping callback function stopped on 140 epochs. The plots above show the smooth nature of the training: metrics values increase, loss values decrease, both converge.
+
+### Architecture 2 - Autoencoder with Skip-Connections
+
+#### Model Architecture
+
+Model Architecture diagram can be found here, since the images are too large to display: [Autoencoder-Skip-Connections Architecture Diagram](images/autoencoder_skip/autoencoder_skip.png)
+
+#### Model Analysis
+
+- Size in memory: 87.0MB
+
+- Number of parameters: 7,053,123
+
+#### Plots - Training, Loss functions
+
+<div>
+  <img src="images/autoencoder_skip/cosine_dice.png" width="400">
+  <img src="images/autoencoder_skip/jaccard_loss.png" width="400">
+</div>
+
+
+As it can be seen, used EarlyStopping callback function stopped a bit later than 140 epochs. 
+
+### Architecture 3 - GAN
+
+#### Model Architecture
+
+Model Architecture diagram can be found here, since the images are too large to display: [GAN Discriminator Architecture Diagram](images/gan/discriminator.png) [GAN Generator Architecture Diagram](images/gan/generator.png)
+
+#### Model Analysis
+
+- Size in memory: 100.0MB
+
+- Number of parameters: 10,200,228
+
+#### Plots - Training, Loss functions
+
+<div>
+  <img src="images/gan/losses.png" width="500">
+  <img src="images/gan/cosine.png" width="500">
+</div>
+
+
+**Remark:** the training was performed ***not*** on the full dataset. Therefore, the results are compromised by that.
+
+A great raggedness can be seen on the plots above. It took the algorithm 4'000 to converge, and still the discriminator did not manage to "win" generator. When it comes to loss function, it stabilizes only by approximately 2'500 epoch.
+
+## Model Comparison and Results
