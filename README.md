@@ -1,1 +1,1 @@
-# Image-inpainting
+# Image Inpainting
