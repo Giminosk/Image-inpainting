@@ -112,7 +112,7 @@ Model Architecture diagram can be found here, since the images are too large to 
 </div>
 
 
-As it can be seen, used EarlyStopping callback function stopped a bit later than 140 epochs. However, loss values are smaller than in case of simple Autoencoder.
+As it can be seen, used EarlyStopping callback function stopped a bit later than 140 epochs. 
 
 ### Architecture 3 - GAN
 
@@ -161,7 +161,7 @@ Model Architecture diagram can be found here, since the images are too large to 
   <img src="images/pconv/loss.png" width="500">
 </div>
 
-As it can be seen, used EarlyStopping callback function stopped at 500 epochs.Loss values are even smaller than Autoencoder with Skip Connections.
+As it can be seen, used EarlyStopping callback function stopped at 500 epochs.
 
 ## Model Comparison and Results
 
