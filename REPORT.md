@@ -157,6 +157,7 @@ Model Architecture diagram can be found here, since the images are too large to 
 #### Plots - Training, Loss functions
 
 <div>
+  <img src="images/pconv/cosine_dice.png" width="500">
   <img src="images/pconv/loss.png" width="500">
 </div>
 
