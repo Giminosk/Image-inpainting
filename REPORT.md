@@ -140,6 +140,28 @@ Model Architecture diagram can be found here, since the images are too large to 
 
 A great raggedness can be seen on the plots above. It took the algorithm 4'000 to converge, and still the discriminator did not manage to "win" generator. When it comes to loss function, it stabilizes only by approximately 2'500 epoch.
 
+### Architecture 4 -  Partial COnvolution
+
+#### Model Architecture
+
+Model Architecture diagram can be found here, since the images are too large to display: [Partial Convolution Architecture Diagram](images/pconv/pconv_model.png)
+
+#### Model Analysis
+
+- Size in memory: 75.0MB
+
+- Number of parameters: 6,260,323
+
+- Training time: ~5h
+
+#### Plots - Training, Loss functions
+
+<div>
+  <img src="images/pconv/loss.png" width="500">
+</div>
+
+As it can be seen, used EarlyStopping callback function stopped at 500 epochs.Loss values are even smaller than Autoencoder with Skip Connections.
+
 ## Model Comparison and Results
 
 ### Autoencoder
@@ -164,6 +186,14 @@ A great raggedness can be seen on the plots above. It took the algorithm 4'000 t
   <img src="images/gan/0.png" alt="sample0"/>
   <img src="images/gan/3.png" alt="sample3"/>
   <img src="images/gan/1.png" alt="sample1"/>
+</div>
+
+### Partial Convolution
+
+<div>
+  <img src="images/pconv/0.png" alt="sample0"/>
+  <img src="images/pconv/3.png" alt="sample3"/>
+  <img src="images/pconv/1.png" alt="sample1"/>
 </div>
 
 ## Tools
@@ -193,5 +223,7 @@ A great raggedness can be seen on the plots above. It took the algorithm 4'000 t
 - [Skip Connections Explained](https://towardsdatascience.com/using-skip-connections-to-enhance-denoising-autoencoder-algorithms-849e049c0ac9)
 
 - [GAN Explained](https://developers.google.com/machine-learning/gan/gan_structure)
+
+- [Partial Convolution](https://github.com/ayulockin/deepimageinpainting/blob/master/utils/pconv_layer.py)
 
 
